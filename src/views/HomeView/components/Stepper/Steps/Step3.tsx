@@ -1,7 +1,20 @@
-import { Box, Divider, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Divider,
+  FormControl,
+  IconButton,
+  InputAdornment,
+  InputBase,
+  OutlinedInput,
+  Paper,
+  Stack,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import CustomButton from "../../../../../components/CustomButton";
 import Wrapper from "./components/Wrapper";
+
+import DirectionsIcon from "@mui/icons-material/Directions";
 
 const Step3 = () => {
   return (
@@ -22,7 +35,33 @@ const Step3 = () => {
         </CustomButton>
       </Stack>
 
-      <h2>Table</h2>
+      <Box>
+        <Stack direction={"row"} spacing={4}>
+          <FormControl sx={{ m: 1, width: "25ch" }} variant="outlined">
+            <OutlinedInput
+              id="outlined-adornment-weight"
+              endAdornment={
+                <InputAdornment position="end" sx={{ background: "#111" }}>
+                  <img
+                    src="/images/search.svg"
+                    height="27px"
+                    width="27px"
+                    alt="Search"
+                  />
+                </InputAdornment>
+              }
+              aria-describedby="outlined-weight-helper-text"
+              inputProps={{
+                "aria-label": "weight",
+              }}
+            />
+          </FormControl>
+
+          <CustomButton background="#1F3BB3" sx={{ borderRadius: "20px" }}>
+            Browse catalog
+          </CustomButton>
+        </Stack>
+      </Box>
 
       <Box>
         <Typography>Bill Details</Typography>

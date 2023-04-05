@@ -166,7 +166,7 @@ const Stepper = () => {
       ) : (
         <div>
           {steps[activeStep].content}
-          <div>
+          <div style={{ paddingTop: "20px" }}>
             <Button disabled={activeStep === 0} onClick={handleBack}>
               Back
             </Button>

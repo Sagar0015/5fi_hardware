@@ -9,6 +9,7 @@ const CustomBtn = styled(Button)({
   lineHeight: "27px",
   height: "64px",
   minWidth: "180px",
+  textTransform: "none",
 });
 
 interface BtnProps {
